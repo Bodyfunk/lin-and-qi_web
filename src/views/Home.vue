@@ -1,7 +1,8 @@
 <template>
     <div class="home">
         <div class="content">
-            <!-- 主页头 -->
+            <div class="logo-group">
+            <!-- 主页头像 -->
             <div class="home-header">
                 <router-link
                 class="link"
@@ -13,6 +14,20 @@
                     alt="aaayi logo"
                 />
                 </router-link>
+            </div>
+            <!-- 主页头像 -->
+            <div class="home-header">
+                <router-link
+                class="link"
+                to="/"
+                >
+                <img
+                    class="home-logo"
+                    src="../assets/image/zzzqi.png"
+                    alt="zzzqi logo"
+                />
+                </router-link>
+            </div>
             </div>
         <!-- 主页 内容 -->
             <div class="home-body">
@@ -88,8 +103,9 @@ console.log(import.meta.env.VITE_APP_TITLE)
   width: 100%;
   height: 100%;
   background-image: url('../assets/image/bro.png');
+  background-size: cover;
   .content {
-    position: fixed;
+      position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -97,8 +113,11 @@ console.log(import.meta.env.VITE_APP_TITLE)
     font-size: 20px;
     text-align: center;
     padding-top: 12%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
     .home-logo {
       width: 220px;
+      height: 217px;
       border-radius: 50%;
     }
     .home-header {
@@ -113,7 +132,10 @@ console.log(import.meta.env.VITE_APP_TITLE)
           display: inline-block;
           padding: 20px;
           color: #409eff;
+          font-size: 24px;
+          font-weight: 800;
           min-width: 80px;
+          text-decoration: none;
         }
         .link:hover {
           color: rgb(155, 35, 35);
@@ -125,5 +147,10 @@ console.log(import.meta.env.VITE_APP_TITLE)
       color: #fff;
     }
   }
+}
+
+.logo-group{
+    display: flex;
+    justify-content: center;
 }
 </style>
