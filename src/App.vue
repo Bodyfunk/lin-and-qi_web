@@ -1,14 +1,23 @@
 <template>
-  <router-view></router-view>
+<div class="container">
+  <el-container>
+    <el-header>
+      <Nav></Nav>
+    </el-header>
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+  </el-container>
+</div>
 </template>
 
 <script lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from './components/Nav.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Nav
   }
 }
 </script>

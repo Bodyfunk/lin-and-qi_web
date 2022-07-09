@@ -9,9 +9,14 @@ const routes: Array<RouteRecordRaw> = [
         component: Home,
     },
     {
-        path: "/helloWorld",
-        name: "HelloWorld",
-        component: HelloWorld,
+        path: "/articles",
+        name: "Articles",
+        component: () => import("../views/Articles/index.vue"),
+    },
+    {
+        path: "/about",
+        name: "About",
+        component: () => import("../views/About/index.vue"),
     },
 ];
 
