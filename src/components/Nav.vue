@@ -8,7 +8,7 @@
                         </el-image>
                     </router-link>
                 </el-col>
-                <el-col :span="21">
+                <el-col :span="18">
                     <el-menu 
                     :router="true"
                     :default-active="state.activeIndex"
@@ -20,6 +20,9 @@
                     <el-menu-item v-for="item in state.list" :key="item.index" :index="item.index" :route="item.path">{{item.name}}</el-menu-item>
                     </el-menu>
                 </el-col>
+                <el-col :span="3">
+                    <h3>{{store.userName}}的博客</h3>
+                </el-col>
             </el-row>
         </div>
     </div>
@@ -29,9 +32,11 @@
 import logoImage from '@/assets/image/bro.png'
 import { ref, reactive } from '@vue/reactivity'
 import { watch } from '@vue/runtime-core';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { NavListItem } from './NavType'
+import { userInfo } from '../store/userInfo';
 
+const store = userInfo()
 const router = useRouter()
 const state = reactive({
       visible: false,
