@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
+import './assets/style.less'
 import router from "./router";
 import { createPinia } from 'pinia';
 import service from "./utils/https";
@@ -29,7 +30,9 @@ import {
     ElImage,
     ElContainer,
     ElHeader,
-    ElMain
+    ElMain,
+    ElDescriptions,
+    ElDescriptionsItem
 } from 'element-plus';
 
 const app = createApp(App)
@@ -57,6 +60,8 @@ app.component(ElImage.name, ElImage);
 app.component(ElContainer.name, ElContainer);
 app.component(ElHeader.name, ElHeader);
 app.component(ElMain.name, ElMain);
+app.component(ElDescriptions.name, ElDescriptions);
+app.component(ElDescriptionsItem.name, ElDescriptionsItem);
 
 app.config.globalProperties.$message = ElMessage;
 app.config.globalProperties.$loading = ElLoading.service;
