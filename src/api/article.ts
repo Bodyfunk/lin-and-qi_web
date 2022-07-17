@@ -9,3 +9,11 @@ export function getArticleList(query) {
         params: query
     })
 }
+
+//获取文章详情
+export function getArticleInfo(cate, title) {
+    return request({
+        url: '/article/' + cate + '/' + title,
+        method: 'get',
+    })
+}

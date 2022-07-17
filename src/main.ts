@@ -31,6 +31,7 @@ import {
     ElContainer,
     ElHeader,
     ElMain,
+    ElAside,
     ElDescriptions,
     ElDescriptionsItem
 } from 'element-plus';
@@ -60,6 +61,7 @@ app.component(ElImage.name, ElImage);
 app.component(ElContainer.name, ElContainer);
 app.component(ElHeader.name, ElHeader);
 app.component(ElMain.name, ElMain);
+app.component(ElAside.name, ElAside);
 app.component(ElDescriptions.name, ElDescriptions);
 app.component(ElDescriptionsItem.name, ElDescriptionsItem);
 
