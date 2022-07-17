@@ -6,7 +6,7 @@
         </article-card>
       </div>
     </div>
-    <div style="width:200px;">aside</div>
+    <div class="aside"></div>
   </div>
 </template>
 
@@ -44,6 +44,7 @@ getList()
 <style lang="scss" scoped>
 .main {
   display: flex;
+  margin: 20px;
 }
 
 .articleCardList {
@@ -57,5 +58,11 @@ getList()
 .hover-Bulge:hover {
   box-shadow: 0 8px 10px 0 rgba(48, 55, 66, 0.15);
   transform: translate(0, -3px);
+}
+
+.aside {
+  width: 200px;
+  background-color: aqua;
+  height: 100%;
 }
 </style>

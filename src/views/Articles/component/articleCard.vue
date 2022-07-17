@@ -19,7 +19,9 @@
               <div class="item">
                 <div class="item-label">分类
                 </div>
-                <div class="item-content">{{articleInfo.category}}</div>
+                <div class="item-content">
+                  <el-tag size="small" type="success">{{articleInfo.category}}</el-tag>
+                </div>
               </div>
             </el-col>
           </el-row>
@@ -97,6 +99,8 @@ const gotoInfo = () => {
   display: flex;
   width: 100%;
   align-items: baseline;
+  font-size: 14px;
+  padding-top: 5px;
   .item-label {
     font-weight: 700;
     width: 50px;
@@ -120,6 +124,7 @@ const gotoInfo = () => {
 }
 
 :deep .el-tag--small {
-  height: 22px;
+  height: 21px;
+  line-height: 21px;
 }
 </style>

@@ -4,10 +4,13 @@
       <el-header>
         <Nav></Nav>
       </el-header>
-
-      <el-main>
-        <router-view></router-view>
-      </el-main>
+      <div class="layout">
+        <div class="left"></div>
+        <div class="middle">
+          <router-view></router-view>
+        </div>
+        <div class="right"></div>
+      </div>
 
     </el-container>
   </div>
@@ -23,3 +26,24 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+.container {
+  height: 100%;
+}
+.layout {
+  display: flex;
+  height: 100%;
+
+  .left {
+    flex: 1;
+  }
+
+  .middle {
+    width: 1000px;
+  }
+
+  .right {
+    flex: 1;
+  }
+}
+</style>
