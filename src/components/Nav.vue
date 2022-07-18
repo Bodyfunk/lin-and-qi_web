@@ -82,4 +82,9 @@ watch(router.currentRoute, (val, oldVal) => {
   max-height: 65px;
   border-radius: 50%;
 }
+
+.el-menu--horizontal > .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal > .el-menu-item:not(.is-disabled):hover {
+  background-color: #fff0;
+}
 </style>

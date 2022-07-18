@@ -54,6 +54,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 101;
   width: 100%;
   height: 100%;
   background-image: url('../assets/image/bro.png');
