@@ -2,13 +2,13 @@
   <div class="nav">
     <div class="nav-content">
       <el-row :gutter="20">
-        <el-col :span="3">
+        <!-- <el-col :span="3">
           <router-link to="/">
             <el-image class="logo" :src="logoImage" alt="lin-and-qi">
             </el-image>
           </router-link>
-        </el-col>
-        <el-col :span="21">
+        </el-col> -->
+        <el-col :span="24">
           <el-menu :router="true" :default-active="state.activeIndex" active-text-color="#409eff" class="el-menu-demo" mode="horizontal" @select="handleSelect">
 
             <el-menu-item v-for="item in state.list" :key="item.index" :index="item.index" :route="item.path">{{item.name}}</el-menu-item>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import logoImage from '@/assets/image/bro.png'
+// import logoImage from '@/assets/image/bro.png'
 import { ref, reactive } from '@vue/reactivity'
 import { watch } from '@vue/runtime-core'
 import { useRouter } from 'vue-router'
