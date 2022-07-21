@@ -15,19 +15,18 @@
       </div>
       <div class="right"></div>
     </div>
-
   </el-container>
 </template>
 
 <script lang="ts">
-import Nav from './components/Nav.vue'
+import Nav from "./components/Nav.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Nav,
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .container {
@@ -41,7 +40,6 @@ export default {
 }
 .layout {
   display: flex;
-  height: 90%;
 
   .left {
     flex: 1;
