@@ -3,6 +3,7 @@
     <div v-if="loading">loading</div>
     <div v-else v-html="articleContent" class="entry-content"></div>
   </div>
+  <!-- <div class="comment-container"></div> -->
 </template>
 
 <script setup lang="ts">
@@ -28,6 +29,14 @@ const getH2 = () => {}
 
 <style scoped>
 .info-main {
-  overflow: scroll;
+  padding: 50px 80px;
+  margin-bottom: 50px;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #e6e6e6, #ffffff);
+  box-shadow: 15px -15px 30px #d9d9d9, -15px 15px 30px #ffffff;
+}
+
+.comment-container {
+  height: 200px;
 }
 </style>
