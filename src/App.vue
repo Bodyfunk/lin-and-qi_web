@@ -8,27 +8,19 @@
       </div>
       <div class="right"></div>
     </el-header>
-    <div class="layout">
-      <div class="left">
-        <div class="fixed-catalogue">目录</div>
-      </div>
-      <div class="middle">
-        <router-view></router-view>
-      </div>
-      <div class="right"></div>
-    </div>
+    <router-view></router-view>
   </el-container>
 </template>
 
 <script lang="ts">
-import Nav from "./components/Nav.vue";
+import Nav from './components/Nav.vue'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     Nav,
   },
-};
+}
 </script>
 <style lang="scss" scoped>
 .container {
@@ -94,12 +86,5 @@ export default {
   z-index: 99;
   width: 100%;
   height: 61px;
-}
-
-.fixed-catalogue {
-  position: fixed;
-  top: 100px;
-  left: 0;
-  z-index: 99;
 }
 </style>

@@ -1,12 +1,17 @@
 <template>
-  <div class="main">
-    <div class="articleCardList" v-if="articleCardList">
-      <div v-for="item in articleCardList" :key="item.title" class="hover-Bulge">
-        <article-card :articleInfo="item">
-        </article-card>
+  <div class="layout">
+    <div class="left">
+    </div>
+    <div class="middle">
+      <div class="articleCardList" v-if="articleCardList">
+        <div v-for="item in articleCardList" :key="item.title" class="hover-Bulge">
+          <article-card :articleInfo="item">
+          </article-card>
+        </div>
       </div>
     </div>
-    <div class="aside"></div>
+    <div class="right">
+    </div>
   </div>
 </template>
 
@@ -45,6 +50,22 @@ getList()
 .main {
   display: flex;
   margin: 20px;
+}
+
+.layout {
+  display: flex;
+
+  .left {
+    flex: 1;
+  }
+
+  .middle {
+    width: 50%;
+  }
+
+  .right {
+    flex: 1;
+  }
 }
 
 .articleCardList {
