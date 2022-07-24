@@ -33,7 +33,8 @@ import {
     ElMain,
     ElAside,
     ElDescriptions,
-    ElDescriptionsItem
+    ElDescriptionsItem,
+    ElTree,
 } from 'element-plus';
 
 const app = createApp(App)
@@ -64,6 +65,7 @@ app.component(ElMain.name, ElMain);
 app.component(ElAside.name, ElAside);
 app.component(ElDescriptions.name, ElDescriptions);
 app.component(ElDescriptionsItem.name, ElDescriptionsItem);
+app.component(ElTree.name, ElTree);
 
 app.config.globalProperties.$message = ElMessage;
 app.config.globalProperties.$loading = ElLoading.service;
