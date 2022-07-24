@@ -9,7 +9,9 @@
       <div class="right"></div>
     </el-header>
     <div class="layout">
-      <div class="left"></div>
+      <div class="left">
+        <div class="fixed-catalogue">目录</div>
+      </div>
       <div class="middle">
         <router-view></router-view>
       </div>
@@ -94,5 +96,12 @@ export default {
   z-index: 99;
   width: 100%;
   height: 61px;
+}
+
+.fixed-catalogue {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  z-index: 99;
 }
 </style>

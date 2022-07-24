@@ -22,6 +22,8 @@ const getInfo = () => {
   })
 }
 getInfo()
+
+const getH2 = () => {}
 </script>
 
 <style scoped>
