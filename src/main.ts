@@ -36,6 +36,8 @@ import {
     ElDescriptionsItem,
     ElTree,
     ElAvatar,
+    ElCalendar,
+
 } from 'element-plus';
 
 const app = createApp(App)
@@ -68,6 +70,7 @@ app.component(ElDescriptions.name, ElDescriptions);
 app.component(ElDescriptionsItem.name, ElDescriptionsItem);
 app.component(ElTree.name, ElTree);
 app.component(ElAvatar.name, ElAvatar);
+app.component(ElCalendar.name, ElCalendar);
 
 app.config.globalProperties.$message = ElMessage;
 app.config.globalProperties.$loading = ElLoading.service;

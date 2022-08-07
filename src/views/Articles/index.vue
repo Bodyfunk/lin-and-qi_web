@@ -11,6 +11,19 @@
       </div>
     </div>
     <div class="right">
+      <div class="classification">
+
+      </div>
+      <div class="calendar">
+
+      </div>
+      <div class="time-line">
+        <el-timeline>
+          <el-timeline-item v-for="(article, index) in articleCardList" :key="index" :timestamp="article.pubTime">
+            {{article.title}}
+          </el-timeline-item>
+        </el-timeline>
+      </div>
     </div>
   </div>
 </template>
@@ -24,22 +37,12 @@ import { ref } from 'vue-demi'
 const store = userInfo()
 
 const articleCardList = ref([])
-//假数据
-// articleCardList.value = [
-//   {
-//     banner:
-//       'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2F0c%2Fef%2Fa0%2F0cefa0f17b83255217eddc20b15395f9.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660626683&t=a2d872398e38cd9a70ca79b3bd461219',
-//     title: 'demo',
-//     publisher: 'aaayi',
-//     category: 'go',
-//     summary:
-//       'czcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwqewqewqczcxzcxddsadsadwq',
-//   },
-// ]
+const query = ref({
+  calendar: undefined,
+})
 
 const getList = () => {
-  getArticleList().then((res) => {
-    console.log(res)
+  getArticleList(query).then((res) => {
     articleCardList.value = res.items
   })
 }
@@ -85,5 +88,12 @@ getList()
   width: 200px;
   background-color: aqua;
   height: 100%;
+}
+
+.calendar {
+}
+
+.time-line {
+  padding: 10px 20px;
 }
 </style>

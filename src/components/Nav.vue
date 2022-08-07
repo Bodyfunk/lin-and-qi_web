@@ -83,6 +83,9 @@ watch(router.currentRoute, (val, oldVal) => {
   border-radius: 50%;
 }
 
+.el-menu-demo {
+  background-color: rgba(0, 255, 255, 0);
+}
 .el-menu--horizontal > .el-menu-item:not(.is-disabled):focus,
 .el-menu--horizontal > .el-menu-item:not(.is-disabled):hover {
   background-color: #fff0;
